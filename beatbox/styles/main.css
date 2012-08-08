@@ -1,0 +1,94 @@
+body {
+	font-family: Helvetica, Arial, "arial sans";
+	font-size: 12px;
+}
+
+video, #info, #description #webcam {
+	display: none;
+}
+
+#video-demo {
+	display: none;
+	position: absolute;
+	top: 150px;
+	left: 10px;
+}
+
+#webcam {
+	display: none;
+	position: absolute;
+	top: 150px;
+	left: 10px;
+}
+
+#canvas-source {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 10px;
+}
+
+#canvas-blended {
+	display: none;
+	position: absolute;
+	top: 407px;
+	left: 500px;
+	width: 150px;
+	height: 113px;
+}
+
+#buttons {
+	display:none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid yellow;
+}
+#buttons #back {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:0;
+}
+#buttons #front {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:1;
+	width: 640px;
+	margin: 0px;
+	padding: 0px;
+}
+#buttons #back img, #buttons #front img {
+	margin: 0px;
+	padding: 0px;
+}
+#buttons #front img {
+	position: absolute;
+	display: none;
+}
+#buttons #button0 { left: 10px;
+		top: 40px;}
+#buttons #button1 { left: 560px;
+		top: 40px;}
+#buttons #button2 { left: 10px;
+		top: 430px;}
+#buttons #button3 { left: 560px;
+		top: 430px;}
+#buttons #back img {
+	position: absolute;
+}
+#buttons #back0 { left: 10px;
+		top: 40px;
+		opacity: 0.4;}
+#buttons #back1 { left: 560px;
+		top: 40px;
+		opacity: 0.4;}
+#buttons #back2 { left: 10px;
+		top: 430px;
+		opacity: 0.4;}
+#buttons #back3 { left: 560px;
+		top: 430px;
+		opacity: 0.4;}

@@ -1,0 +1,166 @@
+body {
+	font-family: Helvetica, Arial, "arial sans";
+	font-size: 12px;
+}
+
+video, #info, #description {
+	display: none;
+}
+
+#video-demo {
+	display: none;
+	position: absolute;
+	top: 150px;
+	left: 10px;
+}
+
+#canvas-source {
+	display: none;
+	position: absolute;
+	top: 40px;
+	left: 10px;
+}
+
+#canvas-blended {
+	display: none;
+	position: absolute;
+	top: 407px;
+	left: 500px;
+	width: 150px;
+	height: 113px;
+}
+
+#buttons {
+	display:none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	border: 1px solid yellow;
+}
+#buttons #back {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:0;
+}
+#buttons #start {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:0;
+}
+#buttons #front {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:1;
+	width: 640px;
+	margin: 0px;
+	padding: 0px;
+}
+#buttons #start_front {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:1;
+	width: 640px;
+	margin: 0px;
+	padding: 0px;
+}
+#buttons #back img, #buttons #front img, #buttons #start img, #buttons #start_front img{
+	margin: 0px;
+	padding: 0px;
+}
+#buttons #front img, #buttons #start_front img  {
+	position: absolute;
+	display: none;
+}
+#buttons #button0 { left: 20px;
+		top: 50px;}
+#buttons #button1 { left: 565px;
+		top: 50px;}
+#buttons #button2 { left: 20px;
+		top: 410px;}
+#buttons #button3 { left: 565px;
+		top: 410px;}
+#buttons #start0_front {
+		max-height: 50px;
+		max-width: 50px;
+		left: 295px;
+		top: 50px;}
+		
+#buttons #back img, #buttons #start img {
+	position: absolute;
+}
+#buttons #back0 { left: 20px;
+		top: 50px;
+		opacity: 0.4;}
+#buttons #back1 { left: 565px;
+		top: 50px;
+		opacity: 0.4;}
+#buttons #back2 { left: 20px;
+		top: 410px;
+		opacity: 0.4;}
+#buttons #back3 { left: 565px;
+		top: 410px;
+		opacity: 0.4;}
+#buttons #start0 {
+		max-height: 50px;
+		max-width: 50px;
+		left: 295px;
+		top: 50px;
+		opacity: 1;}
+#buttons #n1 {	display: none;
+		height: 150px;
+		weight: 150px;
+		left: 295px;
+		top: 240px;
+		opacity: 0.7;}
+#buttons #n2 {	display: none;
+		height: 150px;
+		weight: 150px;
+		left: 295px;
+		top: 240px;
+		opacity: 0.7;}
+#buttons #n3 {	display: none;
+		height: 150px;
+		weight: 150px;
+		left: 295px;
+		top: 240px;
+		opacity: 0.7;}
+#buttons #circle0 {	display: none;
+		left: 275px;
+		top: 400px;
+		opacity: 0.8;}
+#buttons #circle1 {	display: none;
+		left: 275px;
+		top: 400px;
+		opacity: 0.8;}
+#buttons #circle2 {	display: none;
+		left: 275px;
+		top: 400px;
+		opacity: 0.8;}
+#buttons #circle3 {	display: none;
+		left: 275px;
+		top: 400px;
+		opacity: 0.8;}
+#buttons #ex {
+		height: 60px;
+		width: auto;
+		display: none;
+		left: 320px;
+		top: 400px;
+		opacity: 0.8;}
+#chroma {
+		left: 10px;
+		top: 40px;
+		display: none;
+		opacity: 0.25;}
+#buttons #score {
+		max-height: 50px;
+		max-width: 50px;
+		left: 295px;
+		top: 50px;
+}

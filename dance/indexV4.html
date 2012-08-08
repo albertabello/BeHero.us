@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>BeHero</title>
+    <link href='http://fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      webcam {
+	display: none;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="stylesheet" href="styles/main.css"/>
+  </head>
+
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">BeHero</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+		<li class="active"><a href="/dance/">Tap Dance</a></li>
+		<li><a href="/beatbox/">Tap BeatBox</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+<body>
+
+<div class="container-fluid" style="margin-top: 10px;" >
+	
+	<div id="class="row">
+		<div class="span8">
+		<audio id="audioSong" src="audio/pit.mp3" onended="endSong();"></audio>
+		<script>
+			var audio = document.getElementById("audioSong");
+		</script>
+		
+		<button type="button" id="start_button" onclick="start_media()">Start!</button>
+		
+		<div id="message">Loading assets...</div>
+		
+		
+		<!--<device type="media"></device>-->
+		<video id="webcam" autoplay width="640" height="480"></video>
+		
+		<canvas id="canvas-source" width="640" height="480"></canvas>
+		<canvas id="canvas-blended" width="640" height="480" style="display: none;"></canvas>
+		
+		<div id="buttons">
+			<div id="start">
+				<img id="start0" src="images/start.png"/>
+			</div>
+			<div id="start_front">
+				<img id="start0_front" src="images/start.png"/>
+			</div>
+			<div id="back">
+				<img id="back0" src="images/b11.png"/>
+				<img id="back1" src="images/b22.png"/>
+				<img id="back2" src="images/b33.png"/>
+				<img id="back3" src="images/b44.png"/>
+				
+				<img id="n3" src="images/n3.png"/>
+				<img id="n2" src="images/n2.png"/>
+				<img id="n1" src="images/n1.png"/>
+				
+				<img id="circle0" src="images/c1.png"/>
+				<img id="circle1" src="images/c2.png"/>
+				<img id="circle2" src="images/c3.png"/>
+				<img id="circle3" src="images/c4.png"/>
+				<img id="chroma" src="images/chroma.png"/>
+				<img id="ex" src="images/ex.png"/>
+			</div>
+			<div id="front">
+				<img id="button0" src="images/b11.png"/>
+				<img id="button1" src="images/b22.png"/>
+				<img id="button2" src="images/b33.png"/>
+				<img id="button3" src="images/b44.png"/>
+			</div>
+			<div id="score">
+			</div>
+		</div>
+		</div>
+	
+	<script src="js/libs/jquery.js"></script>
+	<script src="js/libs/buffer-loader.js"></script>
+	<script src="js/app.js"></script>
+	</div>
+</div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+     <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap-carousel.js"></script>
+
+</body>
+</html>

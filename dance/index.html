@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Crafty+Girls' rel='stylesheet' type='text/css'>
+    <title>BeHero</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      webcam {
+	display: none;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+    </style>
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="stylesheet" href="styles/main.css"/>
+
+  </head>
+
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">BeHero</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+		<li class="active"><a href="/dance/">Tap Dance</a></li>
+		<li><a href="/beatbox/">Tap BeatBox</a></li>
+		<li><a href="/multi.html">MultiPlayer</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="mailto:beheromotion@gmail.com">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+<body style="background-color: #2C2C2C;">
+
+<div class="container-fluid" style="margin-top: 10px;" >
+	
+	<div class="row">
+		
+		<div class="span12 pagination-centered">
+		<audio id="audioSong" onended="endSong();" preload="auto"></audio>
+		    <script>
+			songNum = Math.floor(Math.random()*5);
+			document.getElementById('audioSong').src="http://behero.us/dance/audio/"+songNum+".mp3";
+			console.log(document.getElementById('audioSong').src);
+		    </script>
+		<!--<device type="media"></device>-->
+		<video id="webcam" autoplay width="640" height="480"></video>
+		
+		<canvas id="canvas-source" width="640" height="480" style="margin-top: 12%; margin-left: 25%; border: 4px solid #999;
+		padding: 2px;"></canvas>
+		<canvas id="canvas-blended" width="640" height="480" style="display: none;"></canvas>
+		
+		<div id="buttons"  style="margin-top: 12%; margin-left: 25%; border: none;">
+			<div id="start">
+				<img id="start0" src="images/start.png"/>
+			</div>
+			<div id="start_front">
+				<img id="start0_front" src="images/start.png"/>
+			</div>
+			<div id="back">
+				<img id="back0" src="images/b11.png"/>
+				<img id="back1" src="images/b22.png"/>
+				<img id="back2" src="images/b33.png"/>
+				<img id="back3" src="images/b44.png"/>
+				
+				<img id="n3" src="images/n3.png"/>
+				<img id="n2" src="images/n2.png"/>
+				<img id="n1" src="images/n1.png"/>
+				
+				<img id="circle0" src="images/c1.png"/>
+				<img id="circle1" src="images/c2.png"/>
+				<img id="circle2" src="images/c3.png"/>
+				<img id="circle3" src="images/c4.png"/>
+				<img id="chroma" src="images/chroma.png"/>
+			</div>
+			<div id="front">
+				<img id="button0" src="images/b11.png"/>
+				<img id="button1" src="images/b22.png"/>
+				<img id="button2" src="images/b33.png"/>
+				<img id="button3" src="images/b44.png"/>
+			</div>
+		</div>
+		</div>
+		<div id="message" class="span12" style="margin-left: 35%; font-family: 'Crafty Girls'; font-size: 50px; color: white;">Loading assets...</div>
+		<div class="span12" style="margin-left: 25%; font-family: 'Crafty Girls'; font-size: 50px; color: white;">
+			<div id="score" ></div><div id="combo" style="margin-left: 30%; margin-top: -17px;"></div>
+		
+
+	<script src="js/libs/jquery.js"></script>
+	<script src="js/libs/buffer-loader.js"></script>
+	<script src="js/app.js"></script>
+	<script>
+		var audio = document.getElementById("audioSong");
+		window.onload = start_media();
+		
+		//<button type="button" id="start_button" onclick="start_media()">Start!</button>
+        function CreateNewLikeButton(url)
+        {
+            var elem = $(document.createElement("fb:like"));
+            elem.attr("href", url);
+            $("#Container").empty().append(elem);
+            FB.XFBML.parse($("#Container").get(0));
+        }
+	</script>
+
+	</div>
+</div>
+<div class="row">
+                <div class="span4" style="margin-left:2%; margin-top:5%; font-family: 'Crafty Girls'; font-size: 16px; color: white;">
+                        Instructions: <br>
+                        1. Accept the access to your camera <br>
+                        2. Move your hand and touch start <br>
+                        3. Touch the colours/shapes at the<br> rythm of the music! <br>
+                        4. Score ;)
+    <div id="Container" style="margin-top: 1%;">
+        <fb:like href="http://behero.us"></fb:like>
+    </div>
+<div style="margin-top: 1%;">
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://behero.us" data-text="Awesome kinect style dance game with just your webcam and some html5, try it!" data-via="beheromotion" data-hashtags="BeHeroMotion">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>                
+</div>
+</div>
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+     <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script src="/js/bootstrap-carousel.js"></script>
+    <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+
+</body>
+</html>
